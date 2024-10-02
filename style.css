@@ -1,0 +1,390 @@
+/* Variables de color */
+:root {
+    --color-fondo: #f5f5f5;
+    --color-fondo-menu: #ffffff;
+    --color-link: #333333;
+    --color-texto: #222222;
+    --color-secundario: #eaeaea;
+    --color-terciario: #007acc;
+    --color-acento: #ff5722; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+/* ------------------------------ Sección Menú ------------------------------- */
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--color-fondo-menu);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cabecera__logo {
+    max-width: 80px;
+    margin-bottom: 0.5rem; 
+}
+
+.cabecera__titulo {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+}
+
+.navegacion__lista {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.navegacion__elemento a {
+    font-size: 1rem;
+    color: var(--color-link);
+    transition: color 0.3s;
+}
+
+.navegacion__elemento a:hover {
+    color: var(--color-terciario); 
+}
+
+/* ------------------------------ Sección Presentación ------------------------------ */
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s; 
+}
+
+.presentacion:hover {
+    transform: scale(1.02); 
+}
+
+.presentacion__foto {
+    width: 150px; 
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    boder: 2px solid var(--color-acento); 
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.redes__img a img {
+    width: 40px; 
+    transition: transform 0.3s, filter 0.3s; 
+}
+
+.redes__img a img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1); 
+}
+
+/* ------------------------------ Sección sobre mí ---------------------------------- */
+.sobre-mi {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*------------------------------ Sección de Habilidades ---------------------------- */
+.habilidades {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 40px 20px;
+}
+
+.habilidades__titulo {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--color-terciario);
+}
+
+.habilidades__lista {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    padding: 0;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 10px;
+}
+
+.habilidades__icono {
+    height: 50px; 
+    margin-bottom: 5px; 
+}
+
+.habilidades__nombre {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones {
+    padding: 30px;
+    margin: 30px auto;
+    text-align: center; 
+}
+
+.aficiones__titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    color: var(--color-principal);
+}
+
+.aficiones__lista {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; 
+}
+
+
+.aficiones__elemento {
+    position: relative;
+    text-align: center; 
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.aficiones__icono {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 4px var(--color-acento);
+    transition: transform 0.3s ease;
+}
+
+.aficiones__icono:hover {
+    transform: scale(1.2);
+}
+
+.aficiones__nombre {
+    font-size: 1rem;
+    font-weight: bold;
+    color:#007acc;
+    opacity: 100;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    
+}
+
+.aficiones__elemento:hover .aficiones__nombre {
+    opacity: 1;
+}
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.formacion {
+    max-width: 800px; 
+    margin: 30px auto; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.formacion__titulo {
+    font-size: 2rem;
+    margin-bottom: 20px; 
+    color: var(--color-terciario);
+}
+
+.formacion__lista {
+    list-style: none;
+    padding: 0; 
+}
+
+.formacion__elemento {
+    font-size: 1.1rem; 
+    margin: 10px 0;
+}
+
+.proyectos {
+    background-color: (var(--color-link));
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.proyectos__titulo {
+    background-color:#ddd;
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--color-terciario);
+}
+
+.proyectos__contenedor {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+
+    background-color:#f5f5f5;
+}
+
+.proyectos__imagen{
+    padding-top: 8%;
+    padding-left: 2%;
+    padding-bottom: 1%;
+    max-width: 50%;
+}
+
+.proyectos__link {
+    display: block; 
+    position: relative; 
+    width: 50%; 
+    max-width: 200px;
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.proyectos__imagen {
+    width: 100%; 
+    display: block; 
+}
+
+.proyectos__overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 50%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.proyectos__link:hover .proyectos__overlay {
+    opacity: 1; 
+}
+/*------------------------------ Sección de Contacto --------------------------------- */
+.contacto {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto__campo {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contacto__boton {
+    padding: 10px;
+    background-color: var(--color-terciario);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto__boton:hover {
+    background-color: #005ea6; 
+}
+
+
+
+
+
+/* ------------------------------ Responsividad --------------------------------------- */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cabecera__titulo {
+        font-size: 2rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+
+    .presentacion {
+        padding: 30px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .presentacion__foto, .proyectos__imagen {
+        width: 100px;
+    }
+}
